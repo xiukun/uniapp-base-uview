@@ -1,0 +1,147 @@
+{
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [
+		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/classify",
+			"style": {
+				"navigationBarTitleText": "商品分类",
+				"titleNView": false
+			}
+		},
+		{
+			"path": "pages/index/home",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		},
+
+		{
+			"path": "pages/index/make",
+			"style": {
+				"navigationBarTitleText": "我要定制"
+			}
+		},
+		{
+			"path": "pages/index/cart",
+			"style": {
+				"navigationBarTitleText": "购物车"
+			}
+		},
+		{
+			"path": "pages/index/mine",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		}
+	    ,{
+            "path" : "pages/user/login/login",
+            "style" : {
+				"navigationBarTitleText": "登录"
+			}
+        }
+        ,{
+            "path" : "pages/user/register/register",
+            "style" : {
+				"navigationBarTitleText": "注册"
+			}
+        }
+        ,{
+            "path" : "pages/user/change-password/change-password",
+            "style" : {
+				"navigationBarTitleText": "忘记密码"
+			}
+        }
+    ],
+	"subPackages": [
+		{
+			"root": "pages/classify",
+			"pages": [
+				{
+					"path": "search",
+					"style": {
+						"navigationBarTitleText": "商品搜索",
+						"navigationBarBackgroundColor": "#fff",
+						"navigationBarTextStyle": "black",
+						"backgroundColorTop": "#fff",
+						"backgroundColorBottom": "#fff",
+						"app-plus": {
+							"bounce": "vertical"
+						}
+					}
+				},{
+					"path":"list",
+					"style":{
+						"navigationBarTitleText": "列表页"
+					}
+				}
+			]
+		},
+		{
+			"root": "pages/home",
+			"pages": [
+				{
+					"path": "index",
+					"style": {
+						"navigationBarTitleText": "首页"
+					}
+				}
+			]
+		}
+	],
+	"preloadRule": {
+		"pages/home/index": {
+			"network": "all",
+			"packages": ["pages/home"]
+		},
+		"pages/classify/list": {
+			"packages": ["pages/classify"]
+		}
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "美酒港",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#ececec",
+		"selectedColor": "#FFFFFF",
+		"borderStyle": "black",
+		"backgroundColor": "#8e1529",
+		"list": [
+			{
+				"pagePath": "pages/index/home",
+				"iconPath": "static/imgs/tabbar/index.png",
+				"selectedIconPath": "static/imgs/tabbar/index.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/index/classify",
+				"iconPath": "static/imgs/tabbar/class.png",
+				"selectedIconPath": "static/imgs/tabbar/class.png",
+				"text": "分类"
+			},
+			{
+				"pagePath": "pages/index/make",
+				"iconPath": "static/imgs/tabbar/dingzhi.png",
+				"selectedIconPath": "static/imgs/tabbar/dingzhi.png",
+				"text": "我要定制"
+			},
+			{
+				"pagePath": "pages/index/cart",
+				"iconPath": "static/imgs/tabbar/car.png",
+				"selectedIconPath": "static/imgs/tabbar/car.png",
+				"text": "购物车"
+			},
+			{
+				"pagePath": "pages/index/mine",
+				"iconPath": "static/imgs/tabbar/home.png",
+				"selectedIconPath": "static/imgs/tabbar/home.png",
+				"text": "我的"
+			}
+		]
+	}
+}
